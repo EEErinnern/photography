@@ -14,14 +14,12 @@ header:
  subtitle: "by Yiping Chen"
 footer:
  name: "Hey there, my name is Yiping"
- bio: "I am a ...."
+ bio: "I am a master student of Economics and have strong interest in capturing the lovely moments of the world."
 web_design: "AJ"
 # Configure which exif data to display
 # Tag is the actual exif tag, icon is a fontawesome icon. Use JSON notation without line breaks
 exif: '[{"tag": "Model", "icon": "camera-retro"}, {"tag": "FNumber", "icon": "dot-circle-o"}, {"tag": "ExposureTime", "icon": "clock-o"}, {"tag": "ISOSpeedRatings", "icon": "info-circle"}]'
 social_urls:
-  twitter: "https://www.twitter.com/ram__patra"
-  instagram: "https://www.instagram.com/ram_patra"
-  dribbble: "https://dribbble.com/rampatra"
-  linkedin: "https://in.linkedin.com/in/ram-patra"
-  github: "https://www.github.com/rampatra"
+  instagram: "https://www.instagram.com/eeerin688/"
+  linkedin: "https://www.linkedin.com/in/yiping-chen-163002225/"
+  github: "https://github.com/EEErinnern"
