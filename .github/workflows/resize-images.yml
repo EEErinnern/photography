@@ -1,1 +1,35 @@
+name: Resize Images
+
+on:
+  push:
+    paths:
+      - images/**  # Run the workflow only when new images are pushed
+
+jobs:
+  resize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Adjust based on your project
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Gulp Task
+        run: gulp resize
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "actions@github.com"
+          git add .
+          git commit -m "Automated image resizing"
+          git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
