@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+        <h1>
+            <a href="{{ site.baseurl }}/">
+                <strong>{{ site.header.title }}</strong>
+                {{ site.header.subtitle }}
+            </a>
+        </h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="{{ site.baseurl }}/">Home</a>
+                </li>
+                <li>
+                    <a href="{{ site.baseurl }}/sports/">Sports</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <div id="main" data-exif='{{ site.exif }}'>
+
+        <header class="page-title">
+            <h1>Tennis</h1>
+            <p>Sports photography</p>
+        </header>
+
+        {% for image in site.static_files %}
+        {% if image.path contains 'fulls' %}
+
+        <article class="thumb">
+            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}"
+                     alt=""
+                     data-name="{{ image.name }}"/>
+            </a>
+        </article>
+
+        {% endif %}
+        {% endfor %}
+
+    </div>
+
+</div>
