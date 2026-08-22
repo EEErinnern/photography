@@ -26,26 +26,20 @@ layout: default
     </header>
 
     <!-- Main -->
-    <div id="main" data-exif='{{ site.exif }}'>
+    <div id="main">
 
         <header class="page-title">
             <h1>Tennis</h1>
             <p>Sports photography</p>
         </header>
 
-        {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
-
         <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}"
-                     alt=""
-                     data-name="{{ image.name }}"/>
+            <a href="{{ site.baseurl }}/images/fulls/sports/tennis/tennis_2.jpg" class="image">
+                <img src="{{ site.baseurl }}/images/thumbs/sports/tennis/tennis_2.jpg"
+                     alt="Tennis"
+                     data-name="tennis_2.jpg"/>
             </a>
         </article>
-
-        {% endif %}
-        {% endfor %}
 
     </div>
 
