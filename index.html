@@ -16,19 +16,37 @@ layout: default
     </header>
 
     <!-- Main -->
-    <div id="main" data-exif='{{ site.exif }}'>
-        {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
-        <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
-                     data-name="{{ image.name }}"/></a>
-            <!--<h2></h2>
-            <p></p>-->
-        </article>
-        {% endif %}
-        {% endfor %}
-    </div>
+<div id="main" class="categories">
+
+    <article class="category">
+        <a href="{{ site.baseurl }}/sports/">
+            <h2>Sports</h2>
+            <p>Tennis and sports photography</p>
+        </a>
+    </article>
+
+    <article class="category">
+        <a href="{{ site.baseurl }}/portraits/">
+            <h2>Portraits</h2>
+            <p>Portrait and people photography</p>
+        </a>
+    </article>
+
+    <article class="category">
+        <a href="{{ site.baseurl }}/events/">
+            <h2>Events</h2>
+            <p>Events and performances</p>
+        </a>
+    </article>
+
+    <article class="category">
+        <a href="{{ site.baseurl }}/personal/">
+            <h2>Personal Projects</h2>
+            <p>Photography projects and stories</p>
+        </a>
+    </article>
+
+</div>
 
     <!-- Footer -->
     <footer id="footer" class="panel">
