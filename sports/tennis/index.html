@@ -31,7 +31,21 @@ layout: default
             <p>Sports photography</p>
         </header>
 
-        <p>My tennis photography.</p>
+        {% for image in site.static_files %}
+            {% if image.path contains '/images/fulls/sports/tennis/' %}
+
+                {% assign filename = image.path | split: '/' | last %}
+
+                <article class="thumb">
+                    <a href="{{ site.baseurl }}/images/fulls/sports/tennis/{{ filename }}" class="image">
+                        <img src="{{ site.baseurl }}/images/thumbs/sports/tennis/{{ filename }}"
+                             alt="Tennis"
+                             data-name="{{ filename }}"/>
+                    </a>
+                </article>
+
+            {% endif %}
+        {% endfor %}
 
     </div>
 
